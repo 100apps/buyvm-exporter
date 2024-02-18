@@ -14,7 +14,7 @@ def read_root():
 """
     data = spider.get_results()
     for row in data:
-        line += "buy_vm_stock{{zone=\"{}\",package_name=\"{}\",price={}}} {} {}\n".format(row["zone"],
+        line += "buy_vm_stock{{zone=\"{}\",package_name=\"{}\",price=\"{}\"}} {} {}\n".format(row["zone"],
                                                                                               row["package_name"],
                                                                                               row["price"],
                                                                                               row["stock"],
