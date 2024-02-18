@@ -1,6 +1,6 @@
+import json
 import re
 from threading import Thread
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -29,9 +29,8 @@ def get_results():
         t.start()
     for t in thread_array:
         t.join()
-    # return json.dumps(result, indent=2)
     return result
 
 
 if __name__ == '__main__':
-    print(get_results())
+    print(json.dumps(get_results(), indent=2))
